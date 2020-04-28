@@ -1,6 +1,6 @@
 import React from 'react';
 import './_Banner.scss';
-import dosgatosplantas from '../img/dosgatosplantas.mp4';
+import catsandplants from '../img/catsandplants.mp4';
 
 
 export default function Banner() {
@@ -11,7 +11,7 @@ export default function Banner() {
                     <h1>Find the perfect place to meet</h1>
                 </div>
                 <div className="valueprop-details">
-                    <p>Select your dates and departure cities you each come frome. Explore all the destinations at the lowest price for you and the people you plan to meet</p>
+                    <p>Select your dates and departure cities you each come from. Explore all the destinations at the lowest price for you and the people you plan to meet</p>
                 </div>
                 <div className="email-form-banner">
                     <form
@@ -27,7 +27,7 @@ export default function Banner() {
             <div className="gif">
         
                 <video className="banner-img" autoPlay="autoplay" loop>
-                    <source src={dosgatosplantas} />
+                    <source src={catsandplants} />
                 </video>           
             </div>
         </div>

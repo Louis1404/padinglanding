@@ -1,6 +1,6 @@
 import React from 'react';
-import earth from '../img/image-fondo.png';
-import cats from '../img/gatosduermen.mp4';
+import mappoints from '../img/mappoints.png';
+import happycats from '../img/happycats.mp4';
 import './_Why.scss';
 
 
@@ -8,7 +8,7 @@ export default function Why() {
     return (
         <div className="wrapper">
             <div className="earth">
-                <img className="earth-img" src={earth} />
+                <img className="earth-img" src={mappoints} alt="meeting of friends thanks to travel"/>
                 <div className="earth-text">
                     <h2>The travel comparator built for long-distance friendships and family</h2>
                 </div>
@@ -16,7 +16,7 @@ export default function Why() {
             <div className="why-to-use-it">
                 <div className="why-to-use-it-gif">
                     <video className="why-to-use-it-video" autoPlay="autoplay" loop>
-                        <source src={cats} />
+                        <source src={happycats} />
                     </video>
                 </div>
                 <div className="why-to-use-it-text">

@@ -1,5 +1,5 @@
 import React from 'react';
-import catsbasket from '../img/gatoscaja.mp4';
+import catsbasket from '../img/catsbasket.mp4';
 import './_Simple.scss';
 
 

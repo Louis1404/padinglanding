@@ -1,5 +1,5 @@
 import React from 'react';
-import video from '../img/videoapp.mp4';
+import padingapp from '../img/padingapp.mp4';
 import './_How.scss';
 
 
@@ -42,7 +42,7 @@ export default function How() {
                 </div>
                 <div className="how-to-use-it-video">
                     <video className="videoapp" loop autoplay="autoplay" height="600px">
-                        <source src={video} />
+                        <source src={padingapp} />
                     </video>
                 </div>
             </div>

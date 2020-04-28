@@ -40,7 +40,7 @@ export default class Footer extends React.Component {
                 <Popup
                   modal
                   trigger={
-                    <a ref="/">
+                    <a>
                       <p>FAQ</p>
                     </a>
                   }
@@ -56,14 +56,23 @@ export default class Footer extends React.Component {
                 <div className="footer-social">
                   <a
                     href="https://www.facebook.com/Pading-103563007939325/?view_public_for=103563007939325"
-                    target="blank"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     <i className="fab fa-facebook"></i>
                   </a>
-                  <a href="http://google.fr">
+                  <a
+                    href="https://www.instagram.com/padingapp/?hl=fr"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
                     <i className="fab fa-instagram"></i>
                   </a>
-                  <a href="http://google.fr">
+                  <a
+                    href="https://www.linkedin.com/company/padingapp/about/?viewAsMember=true"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
                     <i className="fab fa-linkedin"></i>
                   </a>
                 </div>

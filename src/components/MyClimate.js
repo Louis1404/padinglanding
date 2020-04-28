@@ -13,7 +13,7 @@ export default function Simple() {
                     <button className="myclimate-btn-blue">My Climate</button></a>
                 </div>
                 <div className="myclimate-img">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Myclimate_201x_logo.svg/1200px-Myclimate_201x_logo.svg.png" width="350px" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Myclimate_201x_logo.svg/1200px-Myclimate_201x_logo.svg.png" alt="offseting travel co2 emissions with myclimate" width="350px" />
                 </div>
             </div>
         </div>

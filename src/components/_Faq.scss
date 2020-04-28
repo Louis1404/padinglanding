@@ -19,3 +19,27 @@
     text-align: left;
   }
 }
+
+// extra-small screens
+@media (max-width: 900px) {
+  .popup-content {
+    width: 80% !important;
+  }
+  .faq-title {
+    .h4 {
+      font-size: 12px !important;
+    }
+  }
+  .faq-answers {
+    p {
+      font-size: 12px !important;
+    }
+  }
+}
+
+// small screens
+@media (max-width: 1200px) {
+  .popup-content {
+    width: 80% !important;
+  }
+}

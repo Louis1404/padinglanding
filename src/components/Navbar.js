@@ -1,8 +1,7 @@
 import React from "react";
 import axios from "axios";
-import MailchimpSubscribe from "react-mailchimp-subscribe";
 import "./_NavBar.scss";
-import logo from "../img/logo.png";
+import logo from "../img/pading.png";
 
 export default class NavBar extends React.Component {
   state = {
@@ -45,13 +44,25 @@ export default class NavBar extends React.Component {
         </div>
         <div className="navbar-menu">
           <div className="navbar-social">
-            <a href="http://google.fr">
+            <a
+              href="https://www.facebook.com/Pading-103563007939325/?view_public_for=103563007939325"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <i className="fab fa-facebook"></i>
             </a>
-            <a href="http://google.fr">
+            <a
+              href="https://www.instagram.com/padingapp/?hl=fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="http://google.fr">
+            <a
+              href="https://www.linkedin.com/company/padingapp/about/?viewAsMember=true"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <i className="fab fa-linkedin"></i>
             </a>
           </div>

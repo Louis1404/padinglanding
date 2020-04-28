@@ -12,7 +12,7 @@ export default function Cards() {
 
                         <div className="col-xs-6 col-md-4 col-lg-4">
                             <div className="card-trip">
-                                <img src="https://www.guiajando.com/wp-content/uploads/2018/02/budapest_parlamento-1000x580.jpg" />
+                                <img src="https://www.guiajando.com/wp-content/uploads/2018/02/budapest_parlamento-1000x580.jpg" alt="booking tickets and traveling to budapest"/>
                                 <div className="card-trip-infos">
                                     <div className="card-trip-city">
                                         <h5>Budapest</h5>
@@ -28,7 +28,7 @@ export default function Cards() {
             
                         <div className="col-xs-6 col-md-4 col-lg-4">
                             <div className="card-trip">
-                                <img src="https://res.cloudinary.com/hzekpb1cg/image/upload/c_fill,h_410,w_800,f_auto/s3/public/prod/s3fs-public/Italy_Napoli.jpg" />
+                                <img src="https://res.cloudinary.com/hzekpb1cg/image/upload/c_fill,h_410,w_800,f_auto/s3/public/prod/s3fs-public/Italy_Napoli.jpg" alt="booking tickets and traveling to napoli"/>
                                 <div className="card-trip-infos">
                                     <div className="card-trip-city">
                                         <h5>Napoli</h5>
@@ -43,7 +43,7 @@ export default function Cards() {
 
                         <div className="col-xs-6 col-md-4 col-lg-4">
                             <div className="card-trip">
-                                <img src="https://cdn.getyourguide.com/img/tour_img-2266912-146.jpg" />
+                                <img src="https://cdn.getyourguide.com/img/tour_img-2266912-146.jpg" alt="booking tickets and traveling to bilbao"/>
                                 <div className="card-trip-infos">
                                     <div className="card-trip-city">
                                         <h5>Bilbao</h5>
@@ -58,7 +58,7 @@ export default function Cards() {
             
                         <div className="col-xs-6 col-md-4 col-lg-4">
                             <div className="card-trip">
-                                <img src="http://img2.rtve.es/v/4881968/" />
+                                <img src="http://img2.rtve.es/v/4881968/" alt="booking tickets and traveling to cordoba"/>
                                 <div className="card-trip-infos">
                                     <div className="card-trip-city">
                                         <h5>Córdoba</h5>

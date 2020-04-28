@@ -34,7 +34,7 @@ export default function Faq() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className={classes.heading} className="faq-title">
+          <Typography className={`${classes.heading} faq-title`}>
             <h4>Who are we hidden behind Pading?</h4>
           </Typography>
         </ExpansionPanelSummary>
@@ -54,7 +54,7 @@ export default function Faq() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading} className="faq-title">
+          <Typography className={`${classes.heading} faq-title`}>
             <h4>What are the strenghts of Pading?</h4>
           </Typography>
         </ExpansionPanelSummary>
@@ -80,10 +80,10 @@ export default function Faq() {
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
+          aria-controls="panel3a-content"
+          id="panel3a-header"
         >
-          <Typography className={classes.heading} className="faq-title">
+          <Typography className={`${classes.heading} faq-title`}>
             <h4>How do we find for you the cheapest prices?</h4>
           </Typography>
         </ExpansionPanelSummary>
@@ -100,10 +100,10 @@ export default function Faq() {
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel4a-content"
+          id="panel4a-header"
         >
-          <Typography className={classes.heading} className="faq-title">
+          <Typography className={`${classes.heading} faq-title`}>
             <h4>Why will you save a lot of time organizing your next meeting?</h4>
           </Typography>
         </ExpansionPanelSummary>
@@ -134,10 +134,10 @@ export default function Faq() {
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
+          aria-controls="panel5a-content"
+          id="panel5a-header"
         >
-          <Typography className={classes.heading} className="faq-title">
+          <Typography className={`${classes.heading} faq-title`}>
             <h4>What means of transport can be booked?</h4>
           </Typography>
         </ExpansionPanelSummary>
@@ -152,10 +152,10 @@ export default function Faq() {
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel6a-content"
+          id="panel6a-header"
         >
-          <Typography className={classes.heading} className="faq-title">
+          <Typography className={`${classes.heading} faq-title`}>
             <h4>How do you integrate Ecology into Pading?</h4>
           </Typography>
         </ExpansionPanelSummary>
@@ -174,10 +174,10 @@ export default function Faq() {
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
+          aria-controls="panel7a-content"
+          id="panel7a-header"
         >
-          <Typography className={classes.heading} className="faq-title">
+          <Typography className={`${classes.heading} faq-title`}>
             <h4>How do you make money?</h4>
           </Typography>
         </ExpansionPanelSummary>
@@ -202,10 +202,10 @@ export default function Faq() {
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel8a-content"
+          id="panel8a-header"
         >
-          <Typography className={classes.heading} className="faq-title">
+          <Typography className={`${classes.heading} faq-title`}>
             <h4>What is Kiwi, the Website where I will be redirected to book your tickets?</h4>
           </Typography>
         </ExpansionPanelSummary>
@@ -223,10 +223,10 @@ export default function Faq() {
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
+          aria-controls="panel9a-content"
+          id="panel9a-header"
         >
-          <Typography className={classes.heading} className="faq-title">
+          <Typography className={`${classes.heading} faq-title`}>
             <h4>What is our vision with Pading?</h4>
           </Typography>
         </ExpansionPanelSummary>

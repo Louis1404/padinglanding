@@ -10,6 +10,11 @@ import Footer from "./Footer";
 import "./_App.scss";
 
 export default class App extends React.Component {
+  scrollUp() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
   render() {
     return (
       <div>
@@ -20,7 +25,7 @@ export default class App extends React.Component {
         <Simple />
         <Cards />
         <MyClimate />
-        <Footer />
+        <Footer scrollUp={this.scrollUp} />
       </div>
     );
   }

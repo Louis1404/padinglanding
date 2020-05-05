@@ -1,7 +1,7 @@
 import React from "react";
-import axios from "axios";
 import "./_NavBar.scss";
 import logo from "../img/pading.png";
+import MailchimpSubscribe from "react-mailchimp-subscribe"
 
 const CustomForm = ({ status, message, onValidated }) => {
   let email;
@@ -69,22 +69,8 @@ export default class NavBar extends React.Component {
 
 
   render() {
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
     const url =
-      "https://pading.us8.list-manage.com/subscribe/post?u=f59b04ecc60bde092c29981a1&amp;id=9090d92670";
+      "https://pading.us8.list-manage.com/subscribe/post?u=f662f9f87cc780ecd97294f34&amp;id=0ef42685e7";
     return (
 
       <div className="navbar">
@@ -133,18 +119,6 @@ export default class NavBar extends React.Component {
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
     )
   }

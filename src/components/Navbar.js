@@ -3,9 +3,53 @@ import axios from "axios";
 import "./_NavBar.scss";
 import logo from "../img/pading.png";
 
+const CustomForm = ({ status, message, onValidated }) => {
+  let email;
+  const submit = () =>
+    email &&
+    email.value.indexOf("@") > -1 &&
+    onValidated({
+      EMAIL: email.value
+    });
+
+  return (
+    <div >
+      {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
+      {status === "error" && (
+        <div
+          style={{ color: "red" }}
+          dangerouslySetInnerHTML={{ __html: message }}
+        />
+      )}
+      {status === "success" && (
+        <div
+          style={{ color: "green" }}
+          dangerouslySetInnerHTML={{ __html: message }}
+        />
+      )}
+    
+      <br />
+      <input
+      
+        ref={node => (email = node)}
+        type="email"
+        placeholder="Your email"
+      />
+      <br />
+      <button  className="btn-blue" onClick={submit}>
+      Try this app
+      </button>
+    </div>
+
+
+
+
+
+  );
+};
 export default class NavBar extends React.Component {
   state = {
-    email: "",
+    email: ""
   };
 
   onEmailChange(event) {
@@ -15,27 +59,34 @@ export default class NavBar extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     console.log(this.state);
-
-    axios({
-      method: "POST",
-      url: "http://localhost:3000",
-      data: this.state,
-    }).then((response) => {
-      if (response.data.status === "success") {
-        alert("Message sent");
-        this.resetForm();
-      } else if (response.data.status === "fail") {
-        alert("Message failed to send");
-      }
-    });
+  
+    
   }
 
   resetForm() {
     this.setState({ email: "" });
   }
 
+
   render() {
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    const url =
+      "https://pading.us8.list-manage.com/subscribe/post?u=f59b04ecc60bde092c29981a1&amp;id=9090d92670";
     return (
+
       <div className="navbar">
         <div className="navbar-brand">
           <a href="/">
@@ -68,25 +119,33 @@ export default class NavBar extends React.Component {
           </div>
 
           <div className="email-form email-form-background">
-            <form
-              target="_blank"
-              method="POST"
-              onSubmit={this.handleSubmit.bind(this)}
-            >
-              <input
-                name="EMAIL"
-                placeholder="Email address"
-                type="email"
-                value={this.state.name}
-                onChange={this.onEmailChange.bind(this)}
-              />
-              <button className="btn-blue" type="submit">
-                Try this app
-              </button>
-            </form>
+          <MailchimpSubscribe
+          url={url}
+          render={({ subscribe, status, message }) => (
+            <CustomForm
+              status={status}
+              message={message}
+              onValidated={formData => subscribe(formData)}
+            />
+          )}
+        />
+            
           </div>
         </div>
       </div>
-    );
+
+
+
+
+
+
+
+
+
+
+
+
+
+    )
   }
 }

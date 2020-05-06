@@ -27,26 +27,22 @@ const CustomForm = ({ status, message, onValidated }) => {
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
-    
-      <br />
+  
       <input
       
         ref={node => (email = node)}
         type="email"
         placeholder="Your email"
       />
-      <br />
+
       <button  className="btn-blue" onClick={submit}>
       Try this app
       </button>
     </div>
-
-
-
-
-
   );
 };
+
+
 export default class NavBar extends React.Component {
   state = {
     email: ""
@@ -105,16 +101,16 @@ export default class NavBar extends React.Component {
           </div>
 
           <div className="email-form email-form-background">
-          <MailchimpSubscribe
-          url={url}
-          render={({ subscribe, status, message }) => (
-            <CustomForm
-              status={status}
-              message={message}
-              onValidated={formData => subscribe(formData)}
+            <MailchimpSubscribe
+              url={url}
+              render={({ subscribe, status, message }) => (
+                <CustomForm
+                  status={status}
+                  message={message}
+                  onValidated={formData => subscribe(formData)}
+                />
+              )}
             />
-          )}
-        />
             
           </div>
         </div>

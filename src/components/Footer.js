@@ -2,9 +2,58 @@ import React from "react";
 import "./_Footer.scss";
 import Faq from "./Faq";
 import Popup from "reactjs-popup";
+import MailchimpSubscribe from "react-mailchimp-subscribe"
+
+const CustomForm = ({ status, message, onValidated }) => {
+  let email;
+  const submit = () =>
+    email &&
+    email.value.indexOf("@") > -1 &&
+    onValidated({
+      EMAIL: email.value
+    });
+
+  return (
+    <div >
+  
+      <input
+      
+      ref={node => (email = node)}
+      type="email"
+      placeholder="Your email"
+      />
+      
+      <Popup
+        modal
+        trigger={
+          <button  className="btn-blue" onClick={submit}>
+      Try this app
+      </button>
+        }
+        >
+        {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
+        {status === "error" && (
+          <div
+            style={{ color: "red" }}
+            dangerouslySetInnerHTML={{ __html: message }}
+          />
+        )}
+        {status === "success" && (
+          <div
+            style={{ color: "green" }}
+            dangerouslySetInnerHTML={{ __html: message }}
+          />
+        )}
+      </Popup>
+      
+    </div>
+  );
+};
 
 export default class Footer extends React.Component {
   render() {
+    const url =
+      "https://pading.us8.list-manage.com/subscribe/post?u=f662f9f87cc780ecd97294f34&amp;id=0ef42685e7";
     return (
       <div className="wrapper">
         <div className="footer">
@@ -16,19 +65,16 @@ export default class Footer extends React.Component {
                 family
               </p>
               <div className="footer-menu-email-form">
-                <form
-                  target="_blank"
-                  action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                  method="get"
-                >
-                  <input
-                    name="EMAIL"
-                    placeholder="Email address"
-                    required=""
-                    type="email"
-                  />
-                  <button className="btn-blue">Try this app</button>
-                </form>
+              <MailchimpSubscribe
+              url={url}
+              render={({ subscribe, status, message }) => (
+                <CustomForm
+                  status={status}
+                  message={message}
+                  onValidated={formData => subscribe(formData)}
+                />
+              )}
+            />
               </div>
             </div>
             <div className="footer-menu-app-contact">

@@ -86,7 +86,7 @@ export default class Footer extends React.Component {
                 <Popup
                   modal
                   trigger={
-                    <a>
+                    <a href="http://pading.eu">
                       <p>FAQ</p>
                     </a>
                   }

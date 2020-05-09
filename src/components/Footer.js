@@ -2,53 +2,75 @@ import React from "react";
 import "./_Footer.scss";
 import Faq from "./Faq";
 import Popup from "reactjs-popup";
-import MailchimpSubscribe from "react-mailchimp-subscribe"
+import MailchimpSubscribe from "react-mailchimp-subscribe";
+import { withSwalInstance } from "sweetalert2-react";
+import swal from "sweetalert2";
 
 const CustomForm = ({ status, message, onValidated }) => {
   let email;
+
   const submit = () =>
     email &&
     email.value.indexOf("@") > -1 &&
     onValidated({
-      EMAIL: email.value
+      EMAIL: email.value,
     });
 
   return (
-    <div >
-  
+    <div>
+      {status === "error" && (
+        <SweetAlert>
+          {swal.fire({
+            icon: 'info',
+            title: 'You are already part of our community :)',
+            confirmButtonText: 'good to know',
+            confirmButtonColor: '#29b3c1',
+            allowEnterKey: 'true',
+            allowOutsideClick: 'true',
+            buttonsStyling: 'false',
+            footer: '<p>but you can still follow us on social media!</p>',
+            customClass:{
+              cancelButton: 'cancel-button-class'
+            }
+          })}
+        </SweetAlert>
+      )}
+      {status === "success" && (
+        <SweetAlert>
+          {swal.fire({
+            icon: 'success',
+            title: 'Thank you for believing in us! You are now registered',
+            confirmButtonText: 'Thanks',
+            confirmButtonColor: '#29b3c1',
+            allowEnterKey: 'true',
+            allowOutsideClick: 'true',
+            buttonsStyling: 'false',
+            footer: '<p>You can also follow us on social media!</p>',
+            customClass:{
+              cancelButton: 'cancel-button-class'
+            }
+          })}
+        </SweetAlert>
+      )}
+      
       <input
-      
-      ref={node => (email = node)}
-      type="email"
-      placeholder="Your email"
+        ref={(node) => (email = node)}
+        type="email"
+        placeholder="Your email"
       />
-      
-      <Popup
-        modal
-        trigger={
-          <button  className="btn-blue" onClick={submit}>
-      Try this app
+
+      <button
+        className="btn-blue"
+        onClick={submit}
+        disabled={status === "sending"}
+      >
+        Try this app
       </button>
-        }
-        >
-        {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
-        {status === "error" && (
-          <div
-            style={{ color: "red" }}
-            dangerouslySetInnerHTML={{ __html: message }}
-          />
-        )}
-        {status === "success" && (
-          <div
-            style={{ color: "green" }}
-            dangerouslySetInnerHTML={{ __html: message }}
-          />
-        )}
-      </Popup>
-      
     </div>
   );
 };
+
+const SweetAlert = withSwalInstance(swal);
 
 export default class Footer extends React.Component {
   render() {
@@ -86,7 +108,7 @@ export default class Footer extends React.Component {
                 <Popup
                   modal
                   trigger={
-                    <a href="http://pading.eu">
+                    <a>
                       <p>FAQ</p>
                     </a>
                   }

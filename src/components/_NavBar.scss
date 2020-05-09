@@ -45,6 +45,21 @@
   }
 }
 
+button {
+  background-color: #29b3c1;
+  height: 40px;
+  border-radius: 50px !important;
+  color: white;
+  font-size: 14px !important;
+  font-weight: 700;
+  &:hover {
+    background-color: #53c2cd !important;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
 @media (max-width: 900px) {
   .email-form {
     display: none;
